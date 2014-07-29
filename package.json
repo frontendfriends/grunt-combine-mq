@@ -1,0 +1,68 @@
+{
+  "name": "grunt-combine-mq",
+  "description": "Grunt plugin for node-combine-mq",
+  "version": "0.1.0",
+  "homepage": "https://github.com/buildingblocks/grunt-combine-mq",
+  "author": "Building Blocks Ltd <info@building-blocks.com>",
+  "maintainers": [
+    {
+      "name": "Paul Welsh",
+      "email": "p.welsh@building-blocks.com",
+      "web": "http://www.building-blocks.com"
+    },
+    {
+      "name": "Daniel Furze",
+      "email": "d.furze@building-blocks.com",
+      "web": "http://www.building-blocks.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Paul Welsh",
+      "email": "p.welsh@building-blocks.com"
+    },
+    {
+      "name": "Daniel Furze",
+      "email": "d.furze@building-blocks.com"
+    },
+    {
+      "name": "John Cashmore",
+      "email": "j.cashmore@building-blocks.com"
+    },
+    {
+      "name": "Thomas Dobber",
+      "email": "thomasdobber@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildingblocks/grunt-combine-mq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/buildingblocks/grunt-combine-mq/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/buildingblocks/grunt-combine-mq/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
