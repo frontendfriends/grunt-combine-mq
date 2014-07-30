@@ -34,9 +34,12 @@ module.exports = function(grunt) {
         cwd: 'test/',
         src: 'default_options.css',
         dest: 'tmp/'
+      },
+      new_filename: {
+        src: 'test/default_options.css',
+        dest: 'tmp/new_filename.css'
       }
     }
-
   });
 
   // Actually load this plugin's task(s).

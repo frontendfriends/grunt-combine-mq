@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         grunt.log.warn('Source file "' + file.src + '" not found.');
         return next();
       }
-      var processedFile = combineMq.getFile(file.src[0]);
+      var processedFile = combineMq.parseFile(grunt.file.read(file.src[0]));
       grunt.file.write(file.dest, processedFile);
       grunt.log.writeln('File "' + file.dest + '" created.');
     });
