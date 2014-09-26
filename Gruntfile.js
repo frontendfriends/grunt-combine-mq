@@ -31,13 +31,13 @@ module.exports = function(grunt) {
     combine_mq: {
       default_options: {
         expand: true,
-        cwd: 'test/',
-        src: 'default_options.css',
-        dest: 'tmp/'
+        cwd: 'test/expected',
+        src: 'test.css',
+        dest: 'test/actual/'
       },
       new_filename: {
-        src: 'test/default_options.css',
-        dest: 'tmp/new_filename.css'
+        src: 'test/expected/test.css',
+        dest: 'test/actual/new_filename.css'
       }
     }
   });

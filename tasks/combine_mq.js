@@ -7,15 +7,18 @@
  */
 'use strict';
 module.exports = function (grunt) {
-  grunt.registerMultiTask('combine_mq', 'Grunt plugin for node-combine-mq', function() {
+  grunt.registerMultiTask('combine_mq', 'Grunt wrapper for node-combine-mq', function() {
     var combineMq = require('combine-mq');
+    var options = this.options({});
     this.files.forEach( function (file, next) {
-      if (!grunt.file.exists(file.src[0])) {
-        grunt.log.warn('Source file "' + file.src + '" not found.');
+      var src = file.src[0];
+      var dest = file.dest;
+      if (!grunt.file.exists(src)) {
+        grunt.log.warn('Source file "' + src + '" not found.');
         return next();
       }
-      var processedFile = combineMq.parseFile(grunt.file.read(file.src[0]));
-      grunt.file.write(file.dest, processedFile);
+      var processed = combineMq.parseCssString(grunt.file.read(src), options);
+      grunt.file.write(file.dest, processed);
       grunt.log.writeln('File "' + file.dest + '" created.');
     });
   });
