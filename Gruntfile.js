@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/*.js'
+        'tasks/*.js',
+        '<%= nodeunit.tests %>'
       ],
       options: {
         jshintrc: '.jshintrc'
@@ -22,18 +23,26 @@ module.exports = function(grunt) {
     },
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: [
+      'tmp'
+      ]
+    },
+    // Unit tests.
+    nodeunit: {
+      tests: [
+      'test/*_test.js'
+      ]
     },
     // Configuration to be run (and then tested).
     combine_mq: {
       default_options: {
         expand: true,
-        cwd: 'test/expected',
+        cwd: 'test/styles',
         src: 'test.css',
         dest: 'test/actual/'
       },
       new_filename: {
-        src: 'test/expected/test.css',
+        src: 'test/styles/test.css',
         dest: 'test/actual/new_filename.css'
       }
     }
@@ -48,7 +57,8 @@ module.exports = function(grunt) {
   // plugin's task(s), then test the result.
   grunt.registerTask('test', [
     'clean',
-    'combine_mq'
+    'combine_mq',
+    'nodeunit'
   ]);
   // By default, lint and run all tests.
   grunt.registerTask('default', [
