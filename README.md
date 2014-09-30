@@ -70,7 +70,7 @@ grunt.initConfig({
 ```
 
 ## Contributing
-To contribute check the [GitHub issues](https://github.com/buildingblocks/gulp-combine-mq/issues) then work away!
+To contribute check the [GitHub issues](https://github.com/buildingblocks/grunt-combine-mq/issues) then work away!
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
