@@ -1,7 +1,7 @@
 {
   "name": "grunt-combine-mq",
   "description": "Grunt plugin for node-combine-mq",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/frontendfriends/grunt-combine-mq",
   "author": "Front-end Friends Club <hello@frontendfriends.club>",
   "maintainers": [
