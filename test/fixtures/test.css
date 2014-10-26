@@ -14,7 +14,7 @@ body {
 
 body:before,body:after {
 	display:table;
-	content:"";
+	content:'';
 }
 
 body:after {
@@ -22,7 +22,7 @@ body:after {
 }
 
 body:before,body:after {
-	content:"";
+	content:'';
 	display:table;
 }
 
@@ -147,7 +147,7 @@ img {
 }
 
 @media only screen {
-/*   hihihih */
+	/*   hihihih */
 	html{
 		color:red; /* hsdfjsdjhf */
 		line-height: 200;
@@ -162,21 +162,21 @@ img {
 }
 
 @-webkit-keyframes NAME-YOUR-ANIMATION {
-/*   hahahah */
-  0%   { opacity: 0; /* helphelp */ }
-  100% { opacity: 1; }
+	/*   hahahah */
+0%   { opacity: 0; /* helphelp */ }
+100% { opacity: 1; }
 }
 @-moz-keyframes NAME-YOUR-ANIMATION {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 @-o-keyframes NAME-YOUR-ANIMATION {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 @keyframes NAME-YOUR-ANIMATION {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 
 @-moz-document url-prefix(http://www.example.com) {
@@ -200,4 +200,13 @@ img {
 	}
 }
 
-
+@font-face {
+	font-family:'frontendfriends';
+	src:url(../fonts/frontendfriends/frontendfriends.eot?h3i238);
+	src:url(../fonts/frontendfriends/frontendfriends.eot?#iefixh3i238) format("embedded-opentype"),
+	url(../fonts/frontendfriends/frontendfriends.woff?h3i238) format("woff"),
+	url(../fonts/frontendfriends/frontendfriends.ttf?h3i238) format("truetype"),
+	url(../fonts/frontendfriends/frontendfriends.svg?h3i238#frontendfriends) format("svg");
+	font-weight:400;
+	font-style:normal
+}

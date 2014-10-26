@@ -1,6 +1,6 @@
 /*
  * grunt-combine-mq
- * https://github.com/buildingblocks/grunt-combine-mq
+ * https://github.com/frontendfriends/grunt-combine-mq
  *
  * Copyright (c) 2014 Building Blocks
  * Licensed under the MIT license.

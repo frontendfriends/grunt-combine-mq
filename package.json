@@ -2,7 +2,7 @@
   "name": "grunt-combine-mq",
   "description": "Grunt plugin for node-combine-mq",
   "version": "0.2.0",
-  "homepage": "https://github.com/buildingblocks/grunt-combine-mq",
+  "homepage": "https://github.com/frontendfriends/grunt-combine-mq",
   "author": "Building Blocks Ltd <info@building-blocks.com>",
   "maintainers": [
     {
@@ -35,15 +35,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/buildingblocks/grunt-combine-mq.git"
+    "url": "https://github.com/frontendfriends/grunt-combine-mq.git"
   },
   "bugs": {
-    "url": "https://github.com/buildingblocks/grunt-combine-mq/issues"
+    "url": "https://github.com/frontendfriends/grunt-combine-mq/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/buildingblocks/grunt-combine-mq/blob/master/LICENSE-MIT"
+      "url": "https://github.com/frontendfriends/grunt-combine-mq/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -62,7 +62,7 @@
     "grunt": "~0.4.5"
   },
   "dependencies": {
-    "combine-mq": "git://github.com/buildingblocks/node-combine-mq"
+    "combine-mq": "latest"
   },
   "keywords": [
     "gruntplugin"
