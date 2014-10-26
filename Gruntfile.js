@@ -1,6 +1,6 @@
 /*
  * grunt-combine-mq
- * https://github.com/buildingblocks/grunt-combine-mq
+ * https://github.com/frontendfriends/grunt-combine-mq
  *
  * Copyright (c) 2014 Building Blocks
  * Licensed under the MIT license.
@@ -38,12 +38,12 @@ module.exports = function(grunt) {
     combine_mq: {
       default_options: {
         expand: true,
-        cwd: 'test/styles',
+        cwd: 'test/fixtures',
         src: 'test.css',
         dest: 'test/actual/'
       },
       new_filename: {
-        src: 'test/styles/test.css',
+        src: 'test/fixtures/test.css',
         dest: 'test/actual/new_filename.css'
       }
     }
