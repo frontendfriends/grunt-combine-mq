@@ -63,7 +63,7 @@
 		"grunt": "~0.4.5"
 	},
 	"dependencies": {
-		"combine-mq": "latest"
+		"combine-mq": "0.4.0"
 	},
 	"keywords": [
 		"gruntplugin"
