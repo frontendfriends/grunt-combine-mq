@@ -15,7 +15,7 @@ body {
 body:before,
 body:after {
 	display: table;
-	content: "";
+	content: '';
 }
 
 body:after {
@@ -24,7 +24,7 @@ body:after {
 
 body:before,
 body:after {
-	content: "";
+	content: '';
 	display: table;
 }
 
@@ -101,6 +101,17 @@ img {
 #page {
 	max-width: 1140px;
 	margin: 0 20px;
+}
+
+@font-face {
+font-family:'frontendfriends';
+src:url(../fonts/frontendfriends/frontendfriends.eot?h3i238);
+src:url(../fonts/frontendfriends/frontendfriends.eot?#iefixh3i238) format("embedded-opentype"),
+	url(../fonts/frontendfriends/frontendfriends.woff?h3i238) format("woff"),
+	url(../fonts/frontendfriends/frontendfriends.ttf?h3i238) format("truetype"),
+	url(../fonts/frontendfriends/frontendfriends.svg?h3i238#frontendfriends) format("svg");
+font-weight:400;
+font-style:normal;
 }
 
 @media only screen {
