@@ -61,6 +61,9 @@ In this example, the custom options are used to do combine media queries in the 
 grunt.initConfig({
   combine_mq: {
     new_filename: {
+    	options: {
+				beautify: false
+    	},
       src: 'src/test.css',
       dest: 'dist/new_filename.css'
     }
