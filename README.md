@@ -81,6 +81,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * Versioning adheres to [Semver](http://semver.org).
 
 ## Release History
+* 27-09-14 - v0.5.0 - Updates to [Node combine-mq v0.5.0](https://github.com/frontendfriends/node-combine-mq/releases/tag/v0.5.0). See [releases](https://github.com/frontendfriends/node-combine-mq/releases) for more info.
 * 27-09-14 - v0.2.0 - Adds tests.
 * 26-09-14 - v0.1.0 - Initial release.
 
