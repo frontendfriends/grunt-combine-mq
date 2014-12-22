@@ -1,36 +1,39 @@
-/*
- * grunt-combine-mq
- * https://github.com/frontendfriends/grunt-combine-mq
+/**
+ *
+ * @file Combine MQ Task
+ * @version 0.7.0
+ * @author {@link http://github.com/spacedawwwg Paul Welsh}
+ * @link https://github.com/frontendfriends/grunt-combine-mq
  *
  * Copyright (c) 2014 Building Blocks
  * Licensed under the MIT license.
+ *
  */
+ 'use strict';
 
-'use strict';
+ module.exports = function (grunt) {
+ 	grunt.registerMultiTask('combine_mq', 'Grunt wrapper for node-combine-mq', function() {
+ 		var combineMq = require('combine-mq');
 
-module.exports = function (grunt) {
-  grunt.registerMultiTask('combine_mq', 'Grunt wrapper for node-combine-mq', function() {
-    var combineMq = require('combine-mq');
+ 		var options = this.options({
+ 			beautify: true
+ 		});
 
-    var options = this.options({
-    	beautify: true
-    });
+ 		this.files.forEach(function (file, next) {
+ 			var src = file.src[0],
+ 			dest = file.dest,
+ 			processed;
 
-    this.files.forEach(function (file, next) {
-      var src = file.src[0],
-      dest = file.dest,
-      processed;
+ 			if (!grunt.file.exists(src)) {
+ 				grunt.log.warn('Source file "' + src + '" not found.');
 
-      if (!grunt.file.exists(src)) {
-        grunt.log.warn('Source file "' + src + '" not found.');
+ 				return next();
+ 			}
 
-        return next();
-      }
+ 			processed = combineMq.parseCssString(grunt.file.read(src), options);
 
-      processed = combineMq.parseCssString(grunt.file.read(src), options);
-
-      grunt.file.write(file.dest, processed);
-      grunt.log.writeln('File "' + file.dest + '" created.');
-    });
-  });
-};
+ 			grunt.file.write(file.dest, processed);
+ 			grunt.log.writeln('File "' + file.dest + '" created.');
+ 		});
+ 	});
+ };

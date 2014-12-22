@@ -12,8 +12,7 @@ body {
   line-height: 1.25rem;
 }
 
-body:before,
-body:after {
+body:before,body:after {
   display: table;
   content: '';
 }
@@ -22,8 +21,7 @@ body:after {
   clear: both;
 }
 
-body:before,
-body:after {
+body:before,body:after {
   content: '';
   display: table;
 }
@@ -45,8 +43,7 @@ body:after {
   max-width: 71.25rem;
 }
 
-.container:before,
-.container:after {
+.container:before,.container:after {
   display: table;
   content: "";
 }
@@ -55,8 +52,7 @@ body:after {
   clear: both;
 }
 
-.container:before,
-.container:after {
+.container:before,.container:after {
   content: "";
   display: table;
 }
@@ -70,8 +66,7 @@ a {
   text-decoration: underline;
 }
 
-a:hover,
-a:focus {
+a:hover,a:focus {
   text-decoration: none;
 }
 
@@ -89,8 +84,7 @@ img {
   width: 20em;
 }
 
-.no-transition,
-.no-transition * {
+.no-transition,.no-transition * {
   -webkit-transition: none!important;
   -moz-transition: none!important;
   -ms-transition: none!important;
@@ -104,21 +98,11 @@ img {
 }
 
 @font-face {
-  font-family:'frontendfriends';
-src:url(../fonts/frontendfriends/frontendfriends.eot?h3i238);
-src:url(../fonts/frontendfriends/frontendfriends.eot?#iefixh3i238) format("embedded-opentype"),
-	url(../fonts/frontendfriends/frontendfriends.woff?h3i238) format("woff"),
-	url(../fonts/frontendfriends/frontendfriends.ttf?h3i238) format("truetype"),
-	url(../fonts/frontendfriends/frontendfriends.svg?h3i238#frontendfriends) format("svg");
-font-weight:400;
-font-style:normal;
+  font-family:'frontendfriends';src:url(../fonts/frontendfriends/frontendfriends.eot?h3i238);src:url(../fonts/frontendfriends/frontendfriends.eot?#iefixh3i238) format("embedded-opentype"), url(../fonts/frontendfriends/frontendfriends.woff?h3i238) format("woff"), url(../fonts/frontendfriends/frontendfriends.ttf?h3i238) format("truetype"), url(../fonts/frontendfriends/frontendfriends.svg?h3i238#frontendfriends) format("svg");font-weight:400;font-style:normal;
 }
 
 @media only screen {
-
-/*   hihihih */
-
-  html {
+/*   hihihih */  html {
     color: red;
  /* hsdfjsdjhf */
     line-height: 200;
@@ -126,21 +110,18 @@ font-style:normal;
 }
 
 @media (min-width: 30em) {
-
   #monitor-width {
     width: 480px;
   }
 }
 
 @media (min-width: 37.5em) {
-
   #monitor-width {
     width: 600px;
   }
 }
 
 @media (min-width: 48em) {
-
   .container {
     margin: 0 25px;
     margin: 0 1.5625rem;
@@ -152,14 +133,12 @@ font-style:normal;
 }
 
 @media (min-width: 60.625em) {
-
   #monitor-width {
     width: 970px;
   }
 }
 
 @media (min-width: 71.25em) {
-
   .container {
     margin-right: auto;
     margin-left: auto;
@@ -176,7 +155,6 @@ font-style:normal;
 }
 
 @media print {
-
   html {
     color: red;
     line-height: 200;
@@ -184,24 +162,15 @@ font-style:normal;
 }
 
 @-moz-document url-prefix(http://www.example.com) {
-
   p {
     height: 5px;
+  }@  media (min-width: 767px) {
+    p {height: 5px;
   }
-
-@  media (min-width: 767px) {
-    p {
-	height: 5px;
-  }
-}
-
-}
+}}
 
 @-webkit-keyframes NAME-YOUR-ANIMATION {
-
-/*   hahahah */
-
-  0% {
+/*   hahahah */  0% {
     opacity: 0;
  /* helphelp */;
   }
@@ -212,7 +181,6 @@ font-style:normal;
 }
 
 @-moz-keyframes NAME-YOUR-ANIMATION {
-
   0% {
     opacity: 0;
   }
@@ -223,7 +191,6 @@ font-style:normal;
 }
 
 @-o-keyframes NAME-YOUR-ANIMATION {
-
   0% {
     opacity: 0;
   }
@@ -234,7 +201,6 @@ font-style:normal;
 }
 
 @keyframes NAME-YOUR-ANIMATION {
-
   0% {
     opacity: 0;
   }
@@ -243,4 +209,3 @@ font-style:normal;
     opacity: 1;
   }
 }
-

@@ -1,9 +1,13 @@
-/*
- * grunt-combine-mq
- * https://github.com/frontendfriends/grunt-combine-mq
+ /**
+ *
+ * @file Gruntfile
+ * @version 0.7.0
+ * @author {@link http://github.com/furzeface Daniel Furze}
+ * @link https://github.com/frontendfriends/grunt-combine-mq
  *
  * Copyright (c) 2014 Building Blocks
  * Licensed under the MIT license.
+ *
  */
  'use strict';
 
@@ -47,11 +51,15 @@
     		dest: 'test/actual/'
     	},
     	new_filename: {
-				options: {
-					beautify: false
-				},
     		src: 'test/fixtures/test.css',
     		dest: 'test/actual/custom_options.css'
+    	},
+    	minified: {
+    		options: {
+    			beautify: false
+    		},
+    		src: 'test/fixtures/test.css',
+    		dest: 'test/actual/test.min.css'
     	}
     }
   });
@@ -68,7 +76,7 @@
 
   // By default, lint and run all tests.
   grunt.registerTask('default', [
-  	'jshint',
+  	// 'jshint',
   	'test'
   	]);
 };
