@@ -1,21 +1,20 @@
 /**
- *
- * @file Combine MQ Test
- * @version 0.7.0
- * @author {@link http://github.com/furzeface Daniel Furze}
- * @link https://github.com/frontendfriends/grunt-combine-mq
- *
- * Copyright (c) 2014 Building Blocks
- * Licensed under the MIT license.
- *
- */
- 'use strict';
+*
+* @file Combine MQ Test
+* @version 0.9.0
+* @author {@link http://github.com/furzeface Daniel Furze}
+* @link https://github.com/frontendfriends/grunt-combine-mq
+*
+* Copyright (c) 2014 Building Blocks
+* Licensed under the MIT license.
+*
+*/
+'use strict';
 
- var grunt = require('grunt');
+var grunt = require('grunt');
 
- exports.combine_mq = {
- 	setUp: function(done) {
-		// setup here if necessary
+exports.combine_mq = {
+	setUp: function(done) {
 		done();
 	},
 	default_options: function (test) {
@@ -41,8 +40,8 @@
 	minified: function (test) {
 		test.expect(1);
 
-		var expected = grunt.file.read('test/expected/test.min.css'),
-		actual = grunt.file.read('test/actual/test.min.css');
+		var expected = grunt.file.read('test/expected/no_beautify.css'),
+		actual = grunt.file.read('test/actual/no_beautify.css');
 
 		test.equal(expected, actual, 'should combine matching media queries using combine-mq and not beautify the result');
 

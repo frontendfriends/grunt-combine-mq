@@ -84,10 +84,15 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * Versioning adheres to [Semver](http://semver.org).
 
 ## Release History
+* 11-04-15 - v0.9.0 - Logs out original and processed file sizes
+* 07-04-15 - v0.8.0 - Updates to [Node combine-mq v0.8.0](https://github.com/frontendfriends/node-combine-mq/releases/tag/v0.8.0). See [releases](https://github.com/frontendfriends/node-combine-mq/releases) for more info.
+* 22-12-14 - v0.7.0 - Updates to latest node package, adds tasks and rewrites tests for it
 * 21-12-14 - v0.6.0 - Updates to [Node combine-mq v0.6.0](https://github.com/frontendfriends/node-combine-mq/releases/tag/v0.6.0). See [releases](https://github.com/frontendfriends/node-combine-mq/releases) for more info.
 * 21-12-14 - v0.5.0 - Updates to [Node combine-mq v0.5.0](https://github.com/frontendfriends/node-combine-mq/releases/tag/v0.5.0). See [releases](https://github.com/frontendfriends/node-combine-mq/releases) for more info.
 * 27-09-14 - v0.2.0 - Adds tests.
 * 26-09-14 - v0.1.0 - Initial release.
+
+See [releases](https://github.com/frontendfriends/grunt-combine-mq/releases) for more info.
 
 ## License
 [MIT License](http://building-blocks.mit-license.org)

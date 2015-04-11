@@ -1,39 +1,50 @@
-/**
- *
- * @file Combine MQ Task
- * @version 0.7.0
- * @author {@link http://github.com/spacedawwwg Paul Welsh}
- * @link https://github.com/frontendfriends/grunt-combine-mq
- *
- * Copyright (c) 2014 Building Blocks
- * Licensed under the MIT license.
- *
- */
- 'use strict';
+/*
+* grunt-combine-mq
+* https://github.com/frontendfriends/grunt-combine-mq
+*
+* Copyright (c) 2014 Building Blocks
+* Licensed under the MIT license.
+*/
 
- module.exports = function (grunt) {
- 	grunt.registerMultiTask('combine_mq', 'Grunt wrapper for node-combine-mq', function() {
- 		var combineMq = require('combine-mq');
+'use strict';
 
- 		var options = this.options({
- 			beautify: true
- 		});
+module.exports = function (grunt) {
+	grunt.registerMultiTask('combine_mq', 'Grunt wrapper for node-combine-mq', function() {
+		var fs = require('fs'),
+		chalk = require('chalk'),
+		prettyBytes = require('pretty-bytes'),
+		combineMq = require('combine-mq');
 
- 		this.files.forEach(function (file, next) {
- 			var src = file.src[0],
- 			dest = file.dest,
- 			processed;
+		var options = this.options({
+			beautify: true
+		});
 
- 			if (!grunt.file.exists(src)) {
- 				grunt.log.warn('Source file "' + src + '" not found.');
+		this.files.forEach( function (file, next) {
+			var src = file.src[0],
+			dest = file.dest;
 
- 				return next();
- 			}
+			if (!grunt.file.exists(src)) {
+				grunt.log.warn('Source file "' + src + '" not found.');
 
- 			processed = combineMq.parseCssString(grunt.file.read(src), options);
+				return next();
+			}
 
- 			grunt.file.write(file.dest, processed);
- 			grunt.log.writeln('File "' + file.dest + '" created.');
- 		});
- 	});
- };
+			// Collect original filesize stats
+			var stats = fs.statSync(file.src[0]),
+			originalByteSize = stats['size'],
+			originalFileSize = prettyBytes(originalByteSize);
+
+			// Process source
+			var processed = combineMq.parseCssString(grunt.file.read(src), options);
+			// Write file out
+			grunt.file.write(file.dest, processed);
+
+			// Collect processed filesize stats
+			var processedStats = fs.statSync(file.dest),
+			processedByteSize = processedStats['size'],
+			processedFileSize = prettyBytes(processedByteSize);
+
+			grunt.log.writeln('File "' + file.dest + '" created: ' + chalk.green(originalFileSize) + ' → ' + chalk.green(processedFileSize));
+		});
+	});
+};
