@@ -27,11 +27,11 @@ exports.combine_mq = {
 
 		test.done();
 	},
-	custom_options: function (test) {
+	new_filename: function (test) {
 		test.expect(1);
 
-		var expected = grunt.file.read('test/expected/custom_options.css'),
-		actual = grunt.file.read('test/actual/custom_options.css');
+		var expected = grunt.file.read('test/expected/new_filename.css'),
+		actual = grunt.file.read('test/actual/new_filename.css');
 
 		test.equal(expected, actual, 'should combine matching media queries using combine-mq, and use custom options');
 
